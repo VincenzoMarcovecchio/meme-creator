@@ -62,6 +62,20 @@ export default function Meme() {
     }
   }, [memeIndex, memes]);
 
+  const handleIndexer = (index) => {
+    let ordinal =
+      index === 1
+        ? 'st'
+        : index === 2
+        ? 'nd'
+        : index === 3
+        ? 'rd'
+        : index >= 3
+        ? 'th'
+        : '';
+    return ordinal;
+  };
+
   return (
     <>
       {memes.length ? (
@@ -75,10 +89,13 @@ export default function Meme() {
           <button onClick={() => generateMeme()} className={styles.generate}>
             Generate
           </button>
-          {captions.map((c, index = 1) => (
+
+          {captions.map((c, index) => (
             <input
               draggable="true"
-              placeholder={`fill in ${index + 1}° vignette `}
+              placeholder={`Fill in ${index + 1}${handleIndexer(
+                index + 1
+              )} vignette `}
               onChange={(e) => updateCaption(e, index)}
               key={index}
             />
