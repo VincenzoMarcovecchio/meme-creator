@@ -55,4 +55,8 @@ h1 {
   img {
     width: 90%;
   }
+  body {
+    background-repeat: repeat;
+    background-size: contain;
+  }
 }

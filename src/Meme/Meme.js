@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
+import Loader from '../Loader/Loader';
 import { useHistory } from 'react-router-dom';
+
 export default function Meme() {
   const [memes, setMemes] = React.useState([]);
   const [memeIndex, setMemeIndex] = React.useState(0);
@@ -22,8 +24,8 @@ export default function Meme() {
   const generateMeme = () => {
     const currentMeme = memes[memeIndex];
     const formData = new FormData();
-    formData.append('username', process.env.USERNAME);
-    formData.append('password', process.env.PASSWORD);
+    formData.append('username', process.env.REACT_APP_USERNAME);
+    formData.append('password', process.env.REACT_APP_PASSWORD);
     formData.append('template_id', currentMeme.id);
     captions.forEach((c, index) => formData.append(`boxes[${index}][text]`, c));
 
@@ -60,10 +62,6 @@ export default function Meme() {
     }
   }, [memeIndex, memes]);
 
-  React.useEffect(() => {
-    console.log(captions);
-  }, [captions]);
-
   return (
     <>
       {memes.length ? (
@@ -80,7 +78,7 @@ export default function Meme() {
           {captions.map((c, index = 1) => (
             <input
               draggable="true"
-              placeholder={`Fill in ${index + 1}° dialog `}
+              placeholder={`fill in ${index + 1}° vignette `}
               onChange={(e) => updateCaption(e, index)}
               key={index}
             />
@@ -88,7 +86,7 @@ export default function Meme() {
           <img src={memes[memeIndex].url} alt={memes.title} />
         </>
       ) : (
-        <></>
+        <Loader />
       )}
     </>
   );
