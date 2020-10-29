@@ -50,7 +50,105 @@ h1 {
   font-size: 2.5rem;
   text-shadow: 0px 0px 5px black;
 }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: whitesmoke;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  padding: 1rem;
+}
+.navigation-container {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  background-color: sandybrown;
+  padding: 1%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  margin: 3rem auto;
+}
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.mine {
+  width: 400px;
+  height: 400px;
+}
 
+.grid {
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Satisfy', cursive;
+  background-color: gray;
+  color: tomato;
+  margin: auto;
+  overflow: hidden;
+}
+
+.grid div {
+  height: 40px;
+  width: 40px;
+  border-radius: 5%;
+  background: linear-gradient(225deg, #f8f8f8, #d1d1d1);
+  box-shadow: 0px 0px -17px #b7b7b7, 32px 36px -15px #ffffff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.bomb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked div {
+  display: grid;
+  z-index: 8;
+  border-radius: 5%;
+  background: #e8e8e8;
+  box-shadow: inset -3px 3px 7px #b7b7b7, inset 3px -3px 7px #ffffff;
+}
+.slime-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 3rem auto;
+}
+small {
+  color: black;
+}
+footer {
+  background: rgb(255 248 220);
+  height: 5rem;
+  width: 100%;
+}
 @media screen and (max-width: 600px) {
   img {
     width: 90%;
@@ -58,5 +156,20 @@ h1 {
   body {
     background-repeat: repeat;
     background-size: contain;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slime-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mine {
+    width: 100%;
+  }
+  .grid div {
+    height: 10%;
+    width: 10%;
   }
 }
