@@ -9,7 +9,7 @@ import './styles.module.css';
 function App() {
   return (
     <>
-      <h1>Meme Creator</h1>
+      <h1>Meme Creator & more...</h1>
       <Switch>
         <Layout>
           <Route exact path="/">
