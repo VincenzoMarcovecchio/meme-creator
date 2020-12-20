@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Meme for fun",
+  "short_name": "A single meme generator, style and personalize a popular meme into your own",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

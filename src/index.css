@@ -62,7 +62,7 @@ nav {
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .navigation-container {
   width: 300px;
@@ -84,6 +84,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 section {
   margin: 3rem auto;

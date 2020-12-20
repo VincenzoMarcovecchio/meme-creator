@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Meme for fun ",
+  "name": "A single meme generator, style and personalize a popular meme into your own",
   "icons": [
     {
       "src": "favicon.ico",

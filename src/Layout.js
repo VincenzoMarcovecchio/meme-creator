@@ -14,7 +14,16 @@ export default function componentName({ children }) {
       <main>{children}</main>
       <footer>
         <center>
-          <small> This website is opensource</small>
+          <small>
+            <a
+              href="https://twitter.com/_vinny_92"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {' '}
+              This website is opensource
+            </a>
+          </small>
         </center>
       </footer>
     </>
